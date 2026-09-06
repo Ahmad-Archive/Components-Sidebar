@@ -24,7 +24,7 @@ body {
 }
 
 .sidebar {
-  width: 300px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -49,14 +49,13 @@ body {
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background: var(--primary-color);
   border-radius: 50%;
   color: var(--dark);
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .logo-title {
@@ -72,25 +71,27 @@ body {
   gap: 0.5rem;
 }
 
+.sidebar-nav li {
+  list-style: none;
+}
+
 .nav-item {
   display: flex;
   align-items: center;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 0.5rem;
   background: transparent;
   transition: background 0.3s;
   gap: 0.875rem;
-}
-
-.nav-item:hover {
-  background: var(--btn-color);
-}
-
-.nav-item a {
   color: var(--primary-color);
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.nav-item:hover {
+  background: var(--btn-color);
+  cursor: pointer;
 }
 
 .divider {
@@ -104,31 +105,21 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem;
 }
 
 .user-info {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  background: var(--btn-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
 }
 
 .avatar {
-  width: 40px;
-  height: 40px;
-  background: var(--primary-color);
-  border-radius: 50%;
-  color: var(--dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.avatar::before {
-  content: "?";
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--dark);
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-top: 0.3rem;
 }
 
 .user-details {
@@ -136,34 +127,18 @@ body {
   flex-direction: column;
 }
 
-.login-btn button {
-  padding: 0.8rem 3.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  background: rgba(251, 245, 254, 0.3);
+.detail-user .username {
+  padding: 0 1.5rem;
   color: var(--primary-color);
-  width: 100%;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
   margin-bottom: 0.5rem;
 }
 
-.login-btn button:hover {
-  background: var(--accent-color);
+.description .inform {
+  padding: 0 1.5rem;
   color: var(--primary-color);
-}
-
-.register-btn button {
-  padding: 0.8rem 3.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  background: var(--btn-color);
-  color: var(--primary-color);
-  width: 100%;
+  font-size: 14px;
   cursor: pointer;
-  transition: background 0.3s;
-}
-
-.register-btn button:hover {
-  background: rgba(211, 211, 211, 0.2);
+  width: 100%;
 }
