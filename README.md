@@ -24,8 +24,12 @@ Pastikan sebelum anda menginstal dan menjalankan aplikasi, anda telah menginstal
   2. Install Dependencies
   ```
   npm install
+  
   # jika menggunakan router
   npm install react-router-dom
+
+  # menggunakan icon dari lucide-react
+  npm install lucide-react
   ```
 
   3. Run local
