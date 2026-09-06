@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { LayoutDashboard, Activity, Settings, CircleUser, Folder } from 'lucide-react';
 import './App.css'
 
 function App() {
@@ -33,10 +34,10 @@ function App() {
         {/* Sidebar Navigation */}
         <nav className="sidebar-nav">
           <ul> {/* Bisa diganti menggunakan router-dom jika mau disambungkan ke halaman lain, dengan menggunakan component Link */}
-            <li className="nav-item"><a href="#dashboard">Dashboard</a></li>
-            <li className="nav-item"><a href="#profile">Profile</a></li>
-            <li className="nav-item"><a href="#messages">Analytics</a></li>
-            <li className="nav-item"><a href="#settings">Settings</a></li>
+            <li><a href="#dashboard" className="nav-item"><LayoutDashboard size={20} /> Dashboard</a></li>
+            <li><a href="#profile" className="nav-item"><Folder /> Projects</a></li>
+            <li><a href="#messages" className="nav-item"><Activity size={20} /> Analytics</a></li>
+            <li><a href="#settings" className="nav-item"><Settings size={20} /> Settings</a></li>
           </ul>
         </nav>
 
@@ -45,13 +46,13 @@ function App() {
         {/* Sidebar Footer */}
         <div className="sidebar-footer">
           <div className="user-info">
-            <div className="avatar"></div>
+            <div className="avatar icon-folder"><CircleUser size={42} /></div>
             <div className="user-details">
-              <div className="login-btn">
-                <button type="submit">Login</button>
+              <div className="detail-user">
+                <p className="username">AhmadDev</p>
               </div>
-              <div className="register-btn">
-                <button className="register-btn">Register</button>
+              <div className="description">
+                <p className="inform">Web Developer</p>
               </div>
             </div>
           </div>
